@@ -42,7 +42,7 @@ const InputField = ({
         </label>
         {iconClass && (
           <img
-            src={`/src/assets/${iconClass}.svg`}
+            src={iconClass}
             className={`${iconClass} absolute bottom-4 ${
               iconPosition === "start" ? "left-3" : "right-4"
             } `}
