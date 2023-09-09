@@ -5,6 +5,8 @@ import {
   inputFieldStyles,
 } from "../../inputsArrStyles";
 
+import { phone, lock } from "../../assets";
+
 const InputField = ({
   borderColor,
   labelTextColor,
@@ -29,6 +31,15 @@ const InputField = ({
     disabled,
   };
 
+  // Define an object to map iconClass values to corresponding icons
+  const iconMap = {
+    phone: phone,
+    lock: lock,
+  };
+
+  // Check if the iconClass value exists in the iconMap, and get the corresponding icon
+  const iconSrc = iconMap[iconClass];
+
   return (
     <div className="flex flex-col justify-between gap-y-3 mt-6 md:mt-0">
       <p
@@ -40,9 +51,9 @@ const InputField = ({
         <label className={`${inputLabelStyles.styles} ${labelTextColor} mb-1`}>
           Label
         </label>
-        {iconClass && (
+        {iconClass && iconSrc && (
           <img
-            src={iconClass}
+            src={iconSrc}
             className={`${iconClass} absolute bottom-4 ${
               iconPosition === "start" ? "left-3" : "right-4"
             } `}

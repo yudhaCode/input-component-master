@@ -98,7 +98,7 @@ export const inputStyles = {
     inputTextColor: "text-text1",
     titleInputText: "<Input startIcon />",
     inputPadding: "pl-12 pr-3 py-4",
-    iconClass: "/assets/phone-icon.svg",
+    iconClass: "phone",
     iconPosition: "start",
   },
   inputEndIcon: {
@@ -106,8 +106,7 @@ export const inputStyles = {
     labelTextColor: "text-text1",
     inputTextColor: "text-text1",
     titleInputText: "<Input endIcon />",
-    iconClass: "assets/lock-icon.svg",
-
+    iconClass: "lock",
     iconPosition: "end",
   },
   // InputText
