@@ -1,6 +1,6 @@
-import { navLinks } from '../../Constant';
-import { useState } from 'react';
-import { close, menu } from '../../assets';
+import { navLinks } from "../../constant";
+import { useState } from "react";
+import { close, menu } from "../../assets";
 
 const Menu = () => {
   const [toggle, setToggle] = useState(false);
@@ -12,7 +12,7 @@ const Menu = () => {
           <a
             href={`#${nav.id}`}
             className={`hover:text-button-hover cursor-pointer ${
-              nav.active ? 'text-nav-active font-bold' : ''
+              nav.active ? "text-nav-active font-bold" : ""
             } hidden lg:flex`}
             key={nav.id}
           >
@@ -32,14 +32,14 @@ const Menu = () => {
 
         <div
           className={`${
-            toggle ? 'flex' : 'hidden'
+            toggle ? "flex" : "hidden"
           } p-2 flex flex-col space-y-6 lg:hidden`}
         >
           {navLinks.map((nav, index) => (
             <a
               href={`#${nav.id}`}
               className={`hover:text-button-hover cursor-pointer ${
-                nav.active ? 'text-nav-active font-bold' : ''
+                nav.active ? "text-nav-active font-bold" : ""
               } `}
               key={nav.id}
             >
